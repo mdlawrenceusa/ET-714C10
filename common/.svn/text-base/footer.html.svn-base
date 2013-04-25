@@ -1,0 +1,17 @@
+<!-- footer.html -->
+<div id="footer">
+  <div id="copyright">Nature's Source &copy; 2009 Porter Scobey and Pawan
+  Lingras</div>
+  <div id="footerMenu" onmouseout="hide()">
+    <ul class="Links">
+      <li>
+        <a href="#" onmouseover="show('m6')">Contact Us</a> 
+        <div id="m6" onmouseover="show('m6')">
+          <a href="locations.php">Our Locations</a>
+          <a href="feedback.php">Give us feedback</a>
+        </div>
+      </li>
+      <li><a href="sitemap.php" onmouseover="show('m7')">Site Map</a></li>
+    </ul>
+  </div>
+</div>

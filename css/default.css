@@ -1,0 +1,313 @@
+/* default.css for the home page of the complete Nature's Source web site 
+     containing the drop-down menu and rotating images, and with all links
+     from this home page active
+*/
+/* ===== global settings ===== */
+* {
+padding: 0;
+margin: 0;
+}
+
+body {
+width: 900px;
+margin-top: 10px;
+margin-left: 10px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+/* top level container */
+div#page {
+width: 100%; width: 900px;
+}
+
+/* company logo appearing at top of each page */
+div#logo {
+float: left;
+padding: 10px 0;
+}
+
+/* ===== main menu appearing under logo on each page */
+div#mainMenu {
+clear: left;
+width: 900px;
+height: 20px;
+}
+
+/* ===== content area for each page ===== */
+div#content {
+clear: left;
+width: 900px;
+}
+
+div#content p {
+margin: 1em .2em .7em 0;
+text-align: left;
+font-size: 1em;
+}
+
+/* ===== only main page has text at left in content area ===== */
+div#textLeft {
+float: left;
+width: 65%;
+}
+
+div#textLeft h3 {
+margin: 1em 0 .7em;
+text-align: left;
+font-weight: bold;
+font-size: 1em;
+}
+
+/* ===== only main page has image at right in content area ===== */
+div#image {
+float: left;
+width: 35%;
+text-align: center;
+}
+
+div#image img {
+margin-top: 40px;
+}
+
+/* footer must lie below content */
+div#footer {
+clear: left;
+}
+
+/* copyright notice occupies left portion of footer and
+appears in colors of slightly different shades to distinguish
+it from the menu portion of the footer */
+div#copyright {
+float: left;
+width: 539px;
+padding: 4px 0;
+border-right: 1px solid #FFF;
+background-color: #093;
+color: #DDD;
+text-align: center;
+font-weight: bold;
+font-size: .7em;
+}
+
+/* footer menu appears to right of copyright notice in footer */
+div#footerMenu {
+float: left;
+width: 360px;
+}
+
+/* classes for the always-visible menu options and the drop-down menu options */
+.Links {
+padding: 0;
+margin: 0;
+}
+
+/* for the always-visible menu options */
+.Links li {
+padding: 0;
+margin: 0;
+float: left;
+list-style: none;
+font: bold .7em Verdana;
+}
+ 
+.Links li a {
+display: block;
+width: 159px;
+padding: 4px 10px;
+margin: 0 1px 0 0;;
+background-color: #048018;
+color: #FFF;
+text-align: center;
+text-decoration: none;
+}
+
+.Links li a:hover {background-color: #5FB361;}
+
+/* for the drop-down menu options */
+.Links div {
+position: absolute;
+background-color: #C5DCC9;
+border: 1px solid #048018;
+visibility: hidden;
+}
+
+.Links div a {
+display: block;
+width: 156px;
+padding: 5px 10px;
+background-color: #C5DCC9;
+color: #048018;
+text-align: left;
+text-decoration: none;
+font: bold 90% Verdana;
+}
+
+.Links div a:hover {
+background-color: #5FB361;
+color: #FFF;
+}
+
+
+
+/* ===== several pages have only text in the content area ===== */
+div#textOnly p {
+margin: 1em .2em .7em 0;
+}
+
+div#textOnly ol {
+margin: 20px 100px 20px;
+}
+
+div#textOnly ul {
+margin: 0 50px;
+}
+
+
+/* for the BMI and feedback forms */
+.BMIForm {width: 715px;}
+
+.BMIForm h4 {
+padding-top: 20px;
+text-align: center;
+}
+
+.BMIForm select {width: 90px;}
+
+.BMIForm fieldset {
+width: 500px; 
+padding-left: 5px;
+margin-top: 5px;
+margin-left: 50px; 
+}
+
+.FeebackForm {width: 715px;}
+
+.FeedbackForm form {padding: 10px 0;}
+
+.FeedbackForm h4 {padding-top: 20px;}
+
+div#welcome {
+float: left;
+margin-top: 0.5em;
+margin-left: 2em;
+}
+
+div#welcome h5 {
+margin-top: 1em;
+}
+
+/* miscellaneous */
+ul.estore li {
+padding-bottom: 7px;
+}
+
+.margin10 {
+margin: 10px;
+}
+
+#loginForm table td {
+padding: 10px;
+}
+
+#welcome h5 {
+padding-bottom: 3px;
+}
+
+#welcome a {
+text-decoration: none;
+}
+
+.noDecoration {
+text-decoration: none;
+}
+
+/* ===== display for the list of product categories ===== */
+div#departmentList ul li,
+div#departmentList ol li {
+padding: 0;
+margin: 0;
+}
+
+div#departmentList ul {
+margin: 10px 50px 15px 50px;
+}
+
+div#departmentList ol {
+margin: 2px 0 0 35px;
+}
+
+
+div#departmentList ul li {
+margin-top: 5px;
+}
+
+div#departmentList ol li {
+margin-top: 0;
+margin-bottom: 1px;
+}
+
+
+/* ===== display for the list of individual products ===== */
+div#productList table {
+margin-bottom: 20px;
+}
+
+div#productList table td {
+padding: 0 5px;
+}
+
+div#productList img {
+padding: 2px;
+}
+
+
+/* ===== display for the purchasing products page ===== */
+div#purchaseProducts table {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+div#purchaseProducts table td {
+padding: 0 5px;
+}
+
+div#purchaseProducts img {
+padding: 2px;
+}
+
+div#purchaseProducts p {
+text-align: center;
+}
+
+
+/* ===== display for the payment/receipt page ===== */
+div#payment table {
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+div#payment table td {
+padding: 0 5px;
+}
+
+div#payment img {
+padding: 2px;
+}
+
+div#payment p {
+text-align: center;
+}
+
+table.center {
+margin-left:auto;
+margin-right:auto;
+}
+
+p.receipt {
+font-family: Verdana, sans-serif;
+font-size: 2em;
+font-weight: bold;
+}
+
+
