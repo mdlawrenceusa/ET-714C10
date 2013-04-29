@@ -3,7 +3,7 @@
   <img src="images/naturelogo.gif" alt="Nature's Source"
   width="608px" height="90px" />
 </div>
-<div id="welcome">
+<div id="Welcome">
   <?php
   //Please make sure that you have called session_start()
   //at the beginning of the file that includes this script.
