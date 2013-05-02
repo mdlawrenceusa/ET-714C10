@@ -1,8 +1,8 @@
 <?php
     //db.php
-    $db_location = "localhost";
-    $db_username = "root";
-    $db_password = "root";
+    $db_location = "aadwchboqagb7n.cxyxeo3ohdep.us-east-1.rds.amazonaws.com";
+    $db_username = "mdlawrence";
+    $db_password = "mdl75757";
     $db_database = "webbook";
     $db_connection = mysql_connect("$db_location","$db_username","$db_password")
         or die ("Error - Could not connect to MySQL Server");

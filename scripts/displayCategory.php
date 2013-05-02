@@ -1,6 +1,6 @@
 <?php
 //displayCategory.php
-$cat = stripslashes($cat);
+$cat = stripslashes($_REQUEST['cat']);
 $query = "SELECT * FROM Products WHERE
     product_category_code = $cat
     ORDER BY product_name ASC";

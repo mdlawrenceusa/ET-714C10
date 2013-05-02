@@ -1,6 +1,37 @@
 <?php
 //processRegistration.php
 ///////////////////// main begins ///////////////////////
+
+//Setting Local Variables
+$gender = $_POST['gender'];
+$salute = $_POST['salute'];
+
+$firstName = $_POST['firstName'];
+
+$middleInitial = $_POST['middleInitial'];
+
+$lastName = $_POST['lastName'];
+
+$gender = $_POST['gender'];
+
+$email = $_POST['email'];
+
+$unique_login = $_POST['loginName'];
+
+$loginPassword = $_POST['loginPassword'];
+
+$phone = $_POST['phone'];
+
+$address = $_POST['address'];
+
+$city = $_POST['city'];
+
+$state = $_POST['state'];
+
+$country = $_POST['country'];
+
+
+
 if ($gender == "Female") $gender = "F";
 else if ($gender == "Male") $gender = "M";
 else $gender = "O";
