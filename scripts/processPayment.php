@@ -2,9 +2,9 @@
 ///////////////// main begins //////////////////
 session_start();
 include "receipt.php";
-displayReceipt($customer_id);
-$order_id = orderPaid($customer_id);
-orderItemPaid($order_id);
+displayReceipt($_SESSION['customer_id']);
+$order_id = orderPaid($_SESSION['customer_id']);
+orderItemPaid($_SESSION['order_id']);
 ////////////// main ends functions begin //////////////
 
 function orderPaid($customer_id)

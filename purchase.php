@@ -1,7 +1,7 @@
 <?php
 //purchase.php
 session_start();
-if($customer_id == "")
+if($_SESSION['customer_id'] == "")
 {
     $_SESSION["purchasePending"] = stripslashes($prod);
     header('Location: login.php');

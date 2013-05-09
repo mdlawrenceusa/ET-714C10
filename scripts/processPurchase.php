@@ -1,8 +1,10 @@
 <?php
 //processPurchase.php
 ///////////////// main begins /////////////////////
-$prod = stripslashes($prod);
-$items = getExistingOrder($customer_id);
+$prod = stripslashes($_REQUEST['prod']);
+$items = getExistingOrder($_SESSION['customer_id']);
+// How the orders table is being inserted...
+
 $numRecords = mysql_num_rows($items);
 if ($numRecords == 0 && $prod == "view")
 {

@@ -3,8 +3,8 @@
 //main begins
 session_start();
 include "db.php";
-$order_item = stripslashes($order_item);
-$order_id = stripslashes($order_id);
+$order_item = stripslashes($_REQUEST['order_item']);
+$order_id = stripslashes($_REQUEST['order_id']);
 $query = "DELETE FROM Order_Items WHERE order_item_id = $order_item;";
 mysql_query($query)
     or die(mysql_error());

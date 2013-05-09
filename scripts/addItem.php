@@ -11,7 +11,7 @@ $product = mysql_query($_REQUEST['query'])
     or die(mysql_error());
 $row = mysql_fetch_array($product);
 $product_inventory = $row['product_inventory'];
-if ($product_inventory < $quantity)
+if ($product_inventory < $_REQUEST['quantity'])
 {
     header("Location: ../purchase.php?prod=$prod&retry=true");
 }
