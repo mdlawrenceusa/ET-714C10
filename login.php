@@ -24,7 +24,7 @@ if ($_SESSION["customer_id"] != "") header('Location: estore.php');
           <h4>Login Form</h4>
           <p><a href="register.php" class="noDecoration">If you have not yet
             registered for our e-store, please click here to register.</a></p>
-          <form id="loginForm" name="loginForm" action="scripts/processLogin.php"
+          <form method ="post" id="loginForm" name="loginForm" action="scripts/processLogin.php"
                 onsubmit="return validateLoginForm();">
             <table summary="Login Form">
               <tr>
