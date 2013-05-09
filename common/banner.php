@@ -12,7 +12,7 @@
   $customer_middle_initial = $_SESSION["customer_middle_initial"];
   $customer_last_name = $_SESSION["customer_last_name"];
   $customer_id = $_SESSION["customer_id"];
-  if ($nodisplay != true)
+  if ($_REQUEST['nodisplay'] != true)
   {
       if ($customer_id == "")
       {

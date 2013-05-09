@@ -5,19 +5,19 @@ session_start();
 include "db.php";
 $customer_id = $_SESSION["customer_id"];
 $order_id = getOrderID($customer_id);
-$prod = stripslashes($prod);
+$prod = stripslashes($_REQUEST['prod']);
 $query = "SELECT * FROM Products WHERE product_id=$prod;";
-$product = mysql_query($query)
+$product = mysql_query($_REQUEST['query'])
     or die(mysql_error());
 $row = mysql_fetch_array($product);
-$product_inventory = $row[product_inventory];
+$product_inventory = $row['product_inventory'];
 if ($product_inventory < $quantity)
 {
     header("Location: ../purchase.php?prod=$prod&retry=true");
 }
 else
 {
-    $product_price = $row[product_price];
+    $product_price = $row['product_price'];
     $query = "INSERT INTO Order_Items
     (
         order_item_status_code,
