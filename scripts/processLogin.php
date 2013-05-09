@@ -10,7 +10,7 @@ $numRecords = mysql_num_rows($rowsWithMatchingLoginName);
 if ($numRecords == 1)
 {
     $row = mysql_fetch_array($rowsWithMatchingLoginName);
-    if ($_POST'customer_pw' == $row["login_password"])
+    if ($_POST['customer_pw'] == $row["login_password"])
     {
         $_SESSION["customer_id"] = $row["customer_id"];
         $_SESSION["salutation"] = $row["salutation"];
