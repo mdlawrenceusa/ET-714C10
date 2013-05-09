@@ -1,13 +1,10 @@
 <?php
     //db.php
-<<<<<<< HEAD
-    $db_location = "et714w1.cxyxeo3ohdep.us-east-1.rds.amazonaws.com";
-=======
-    //$db_location = "et714webbook.cxyxeo3ohdep.us-east-1.rds.amazonaws.com";
-    
-    $db_location = "localhost";
+    //$db_location = "localhost";
 
->>>>>>> Switched to LocalHost database
+    
+    $db_location = "et714w1.cxyxeo3ohdep.us-east-1.rds.amazonaws.com";    
+
     $db_username = "mdlawrence";
     $db_password = "mdl75757";
     $db_database = "webbook";
