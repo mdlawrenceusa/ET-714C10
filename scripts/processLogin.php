@@ -3,14 +3,14 @@
 session_start();
 include "db.php";
 $query = "SELECT * FROM Customers WHERE
-    login_name = \"".$customer_nm."\";";
+    login_name = \"".$_POST['customer_nm']."\";";
 $rowsWithMatchingLoginName = mysql_query($query)
     or die(mysql_error());
 $numRecords = mysql_num_rows($rowsWithMatchingLoginName);
 if ($numRecords == 1)
 {
     $row = mysql_fetch_array($rowsWithMatchingLoginName);
-    if ($customer_pw == $row["login_password"])
+    if ($_POST'customer_pw' == $row["login_password"])
     {
         $_SESSION["customer_id"] = $row["customer_id"];
         $_SESSION["salutation"] = $row["salutation"];
