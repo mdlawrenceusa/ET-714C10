@@ -45,10 +45,21 @@ function getExistingOrder($customer_id)
 
 function displayHeader()
 {
-    echo "<p class='receipt'><strong>***** R E C E I P T *****</strong></p>
+   /* echo "<p class='receipt'><strong>***** R E C E I P T *****</strong></p>
       <p><strong>Payment received from $_SESSION[customer_first_name]
       $_SESSION[customer_middle_initial] $_SESSION[customer_last_name] on "
-      .date("F j, Y")." at ".date('g:ia').".</strong></p>";
+      .date("F j, Y")." at ".date('g:ia').".</strong></p>"; */
+      
+      
+      echo "<p class='receipt'><strong>***** R E C E I P T *****</strong></p>
+	<p><strong>Payment received from " . $_SESSION['customer_first_name'] . " " .
+	$_SESSION['customer_middle_initial'] . " " . $_SESSION['customer_last_name'] . " on "
+	 .date("F j, Y")." at ".date('g:ia').".</strong></p>";
+      
+      
+      
+      
+      
     echo "<table border='1px' cellpadding='2px' class='center'>";
     echo "<tr>
         <td align='center'><strong>Product Image</strong></td>

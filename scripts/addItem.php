@@ -7,7 +7,7 @@ $customer_id = $_SESSION["customer_id"];
 $order_id = getOrderID($customer_id);
 $prod = stripslashes($_REQUEST['prod']);
 $query = "SELECT * FROM Products WHERE product_id=$prod;";
-$product = mysql_query($_REQUEST['query'])
+$product = mysql_query($query)
     or die(mysql_error());
 $row = mysql_fetch_array($product);
 $product_inventory = $row['product_inventory'];
@@ -34,7 +34,8 @@ else
         $prod,
         $quantity,
         $product_price,
-        NULL
+        'NA'
+      
     );";
     mysql_query($query)
         or die(mysql_error());
