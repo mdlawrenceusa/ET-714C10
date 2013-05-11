@@ -11,7 +11,7 @@ $product = mysql_query($query)
     or die(mysql_error());
 $row = mysql_fetch_array($product);
 $product_inventory = $row['Product_inventory'];
-$quantity=$_REQUEST['quantity'];
+$quantity= 1 ;//$_REQUEST['quantity'];
 
 if ($product_inventory < $quantity)
 {
