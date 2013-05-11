@@ -2,8 +2,9 @@
 //processPurchase.php
 ///////////////// main begins /////////////////////
 $prod = stripslashes($_REQUEST['prod']);
+$customer_id = $_SESSION["customer_id"];
 $items = getExistingOrder($_SESSION['customer_id']);
-// How the orders table is being inserted...
+// Some How the orders table is being inserted...
 
 $numRecords = mysql_num_rows($items);
 if ($numRecords == 0 && $prod == "view")
@@ -75,7 +76,7 @@ function createOrder($customer_id)
         '$customer_id',
         'IP',
         CURDATE( ),
-        NULL
+        'NA'
     );";
     mysql_query($query)
         or die(mysql_error());
@@ -116,29 +117,29 @@ function displayFirstFourColumns($prod)
     echo "<tr>\n";
     echo "<td align = center>";
     echo  "<img height='70' width='70'
-        src = \"".$row[product_image_url]."\" />";
+        src = \"".$row['product_image_url']."\" />";
     echo "</td><td>";
-    echo $row[product_name];
+    echo $row['product_name'];
     echo "</td><td align='center'>";
-    printf("$%.2f\n",$row[product_price]);
+    printf("$%.2f\n",$row['product_price']);
     echo "</td><td align='center'>";
-    echo $row[product_inventory];
+    echo $row['product_inventory'];
     echo "</td>";
 }
 
 function displayExistingItem($items)
 {
     $row = mysql_fetch_array($items);
-    $prod = $row[product_id];
+    $prod = $row['product_id'];
     displayFirstFourColumns($prod);
     echo "<td align='center'>";
-    echo $row[order_item_quantity];
+    echo $row['order_item_quantity'];
     echo "</td><td align='right'>";
-    $total = $row[order_item_quantity]*$row[order_item_price];
+    $total = $row['order_item_quantity']*$row['order_item_price'];
     printf("$%.2f", $total);
     echo "</td><td align='center'>";
     echo "<p><a href='scripts/deleteItem.php?order_item=".
-        $row[order_item_id]."&order_id=".$row[order_id]."'>
+        $row['order_item_id']."&order_id=".$row['order_id']."'>
         <input type='button' value='Delete from cart' /></a></p>
         <p><a href='department.php'>
         <input type='button' value='Continue shopping' />
@@ -150,8 +151,10 @@ function displayNewItem($prod)
 {
     displayFirstFourColumns($prod);
     echo "<td align='center'>";
+    
     echo "<input type='hidden' id='prod'
-          name='prod' value=\"$prod\">";
+          name='prod' value=".trim($prod).">";
+          
     echo "<input type='text' id='quantity'
           name='quantity' size='3'>";
     echo "</td><td align='center'>";

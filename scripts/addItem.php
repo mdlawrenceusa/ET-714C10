@@ -10,8 +10,10 @@ $query = "SELECT * FROM Products WHERE product_id=$prod;";
 $product = mysql_query($query)
     or die(mysql_error());
 $row = mysql_fetch_array($product);
-$product_inventory = $row['product_inventory'];
-if ($product_inventory < $_REQUEST['quantity'])
+$product_inventory = $row['Product_inventory'];
+$quantity=$_REQUEST['quantity'];
+
+if ($product_inventory < $quantity)
 {
     header("Location: ../purchase.php?prod=$prod&retry=true");
 }
@@ -53,6 +55,6 @@ function getOrderID($customer_id)
     $order = mysql_query($query)
         or die(mysql_error());
     $row = mysql_fetch_array($order);
-    return $row[order_id];
+    return $row['order_id'];
 }
 ?>

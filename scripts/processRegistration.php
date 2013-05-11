@@ -16,7 +16,7 @@ $gender = $_POST['gender'];
 
 $email = $_POST['email'];
 
-$unique_login = $_POST['loginName'];
+$loginName = $_POST['loginName'];
 
 $loginPassword = $_POST['loginPassword'];
 
