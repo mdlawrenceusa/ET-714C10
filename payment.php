@@ -1,7 +1,7 @@
 <?php
 //payment.php
 session_start();
-if (preg_match('/purchase.php/', $_SERVER[HTTP_REFERER]) == 0)
+if (preg_match('/purchase.php/', $_SERVER['HTTP_REFERER']) == 0)
 {
     header('Location: purchase.php?prod=view');
 }
